@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
                 <Icon name="Wifi" className="h-4 w-4 text-primary-foreground" />
               </div>
-              <span className="font-bold text-xl">eSIM.RF</span>
+              <span className="font-bold text-xl">Есимыч</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Современные eSIM для путешествий по всему миру. Быстро, удобно,
@@ -22,24 +22,30 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">Навигация</h4>
             <nav className="flex flex-col space-y-2">
-              <Link
-                to="/"
+              <a
+                href="#hero"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Главная
-              </Link>
-              <Link
-                to="/catalog"
+              </a>
+              <a
+                href="#catalog"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Каталог eSIM
-              </Link>
-              <Link
-                to="/about"
+              </a>
+              <a
+                href="#about"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 О нас
-              </Link>
+              </a>
+              <a
+                href="#contact"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Контакты
+              </a>
             </nav>
           </div>
 
@@ -95,7 +101,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 eSIM.RF. Все права защищены.
+              © 2024 Есимыч. Все права защищены.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">

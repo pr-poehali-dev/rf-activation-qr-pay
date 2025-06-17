@@ -76,13 +76,16 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10">
+      <section
+        id="hero"
+        className="relative py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10"
+      >
         <div className="container mx-auto text-center">
           <Badge className="mb-4" variant="secondary">
             🚀 Новинка для путешественников
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-            eSIM для путешествий
+            eSIM от Есимыч
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Интернет в любой стране мира. Без роуминга, без привязки к
@@ -90,10 +93,10 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="text-lg px-8 py-6" asChild>
-              <Link to="/catalog">
+              <a href="#catalog">
                 <Icon name="Globe" className="mr-2 h-5 w-5" />
                 Выбрать eSIM
-              </Link>
+              </a>
             </Button>
             <Button
               size="lg"
@@ -101,18 +104,18 @@ const Index = () => {
               className="text-lg px-8 py-6"
               asChild
             >
-              <Link to="/about">Как это работает</Link>
+              <a href="#about">Как это работает</a>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
+      {/* About/FAQ Section */}
+      <section id="about" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Почему выбирают наши eSIM
+              Почему выбирают Есимыч
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Современная технология для комфортных путешествий
@@ -147,44 +150,38 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Popular Plans Section */}
-      <section className="py-20 px-4 bg-muted/50">
+      {/* Catalog Section */}
+      <section id="catalog" className="py-20 px-4 bg-muted/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Популярные планы
+              Каталог eSIM
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Выберите подходящий тариф для ваших путешествий
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {popularPlans.map((plan) => (
               <eSIMCard key={plan.id} {...plan} />
             ))}
           </div>
-
-          <div className="text-center">
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/catalog">
-                Смотреть все планы
-                <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-primary text-primary-foreground">
+      {/* Contact/CTA Section */}
+      <section
+        id="contact"
+        className="py-20 px-4 bg-primary text-primary-foreground"
+      >
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Готовы к путешествию?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Получите eSIM за 2 минуты и путешествуйте с интернетом в любой точке
-            мира
+            Получите eSIM от Есимыч за 2 минуты и путешествуйте с интернетом в
+            любой точке мира
           </p>
           <Button
             size="lg"
@@ -192,10 +189,10 @@ const Index = () => {
             className="text-lg px-8 py-6"
             asChild
           >
-            <Link to="/catalog">
+            <a href="#catalog">
               <Icon name="Rocket" className="mr-2 h-5 w-5" />
               Купить eSIM сейчас
-            </Link>
+            </a>
           </Button>
         </div>
       </section>
