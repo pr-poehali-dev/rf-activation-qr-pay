@@ -118,7 +118,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-slate-100">
-              Популярные eSIM
+              Каталог eSIM
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Выберите подходящий тариф для ваших путешествий
@@ -128,7 +128,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {popularPlans.map((plan) => (
               <eSIMCard
-                key={`catalog-${plan.id}`}
+                key={plan.id}
                 id={plan.id}
                 country={plan.title}
                 flag="🌍"
