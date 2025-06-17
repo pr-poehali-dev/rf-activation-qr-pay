@@ -110,6 +110,29 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Catalog Section */}
+      <section
+        id="catalog"
+        className="py-20 px-4 bg-slate-50 dark:bg-slate-900"
+      >
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-slate-100">
+              Популярные eSIM
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              Выберите подходящий тариф для ваших путешествий
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {popularPlans.map((plan) => (
+              <eSIMCard key={plan.id} {...plan} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About/FAQ Section */}
       <section id="about" className="py-20 px-4">
         <div className="container mx-auto">
