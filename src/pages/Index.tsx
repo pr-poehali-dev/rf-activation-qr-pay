@@ -84,7 +84,7 @@ const Index = () => {
           <Badge className="mb-4" variant="secondary">
             🚀 Новинка для путешественников
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 bg-clip-text text-transparent">
             eSIM от Есимыч
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -127,7 +127,17 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {popularPlans.map((plan) => (
-              <eSIMCard key={plan.id} {...plan} />
+              <eSIMCard
+                key={`catalog-${plan.id}`}
+                id={plan.id}
+                country={plan.title}
+                flag="🌍"
+                data={plan.dataAmount}
+                duration={`${plan.validityDays} дней`}
+                price={plan.price}
+                popular={plan.popular}
+                features={plan.coverage}
+              />
             ))}
           </div>
         </div>
@@ -187,7 +197,17 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {popularPlans.map((plan) => (
-              <eSIMCard key={plan.id} {...plan} />
+              <eSIMCard
+                key={`catalog-${plan.id}`}
+                id={plan.id}
+                country={plan.title}
+                flag="🌍"
+                data={plan.dataAmount}
+                duration={`${plan.validityDays} дней`}
+                price={plan.price}
+                popular={plan.popular}
+                features={plan.coverage}
+              />
             ))}
           </div>
         </div>
